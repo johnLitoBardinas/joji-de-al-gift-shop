@@ -83,6 +83,13 @@ a {
     color: inherit;
 }
 
+p,
+small,
+b,
+strong {
+  color: inherit;
+}
+
 .stack {
     display: flex;
     flex-direction: column;
@@ -109,19 +116,20 @@ a {
 
 .container {
   position: relative;
-}
 
-.container .sm-share {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  cursor: pointer;
-}
+  .sm-share {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
 
-.container .sm-share i {
-  font-size: 4ch;
+    i {
+      font-size: 4ch;
+    }
+  }
+
 }
 
 .business__logo {
@@ -143,12 +151,19 @@ a {
   transition: all 0.3s ease-in;
   color: var(--colour-dark);
   cursor: pointer;
-}
 
-.order__form > li:hover {
-  /* padding: var(--s1); */
-  background-color: var(--color-violet);
-  color: white;
+  &:hover {
+    background-color: var(--color-violet);
+    color: white;
+  }
+
+  p {
+    margin: 0;
+    margin-top: var(--s-1);
+    margin-block-start: var(--s-1);
+    font-size: var(--font-size-biggish);
+    font-weight: bold;
+  }
 }
 
 
